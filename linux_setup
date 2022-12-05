@@ -1,0 +1,8 @@
+#install python and ansible
+sudo apt install python3-pip -y
+pip install pywinrm 
+pip install boto3
+pip3 install --upgrade awscli
+sudo apt install ansible -y
+ansible-galaxy collection install amazon.aws
+ansible-galaxy collection install ansible.windows

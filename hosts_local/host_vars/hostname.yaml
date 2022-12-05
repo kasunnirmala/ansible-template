@@ -1,0 +1,11 @@
+ansible_host: "IP"
+ansible_user: Administrator
+ansible_password: "admin_password"
+ansible_become_user: "svc_mfadmprd_username"
+ansible_become_password: "{{ lookup('amazon.aws.aws_secret', 'mb422rmeapp01d.password', nested=true, region='us-east-1') }}"
+ansible_become: yes
+ansible_become_method: runas
+ansible_port: 5985
+ansible_connection: winrm
+ansible_winrm_transport: basic
+ansible_winrm_server_cert_validation: ignore
